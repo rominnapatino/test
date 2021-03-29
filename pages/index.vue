@@ -37,7 +37,9 @@ export default {
     axios.get(url)
     .then(response =>{
       this.monedas = response.data
-    })
+    }).catch(error => {
+    console.log(error)
+    });
   },
 
 }
